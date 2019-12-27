@@ -11,5 +11,14 @@ def sierpinski_triangle(game_display, left_base_point, side_length, main_color, 
 def sierpinski_triangle_aux(game_display, left_base_point, side_length, color, depth):
     if depth == 0:
         return
-    flipped_left_base_point = generate_point_by_distance_and_angle(left_base_point, side_length / 2, -120)
-    equilateral_triangle(game_display, color, flipped_left_base_point, side_length / 2, True, True)
+
+    half_side_length = side_length / 2
+
+    flipped_left_base_point = generate_point_by_distance_and_angle(left_base_point, half_side_length, -120)
+    equilateral_triangle(game_display, color, flipped_left_base_point, half_side_length, True, True)
+
+    third_base_point = generate_point_by_distance_and_angle(left_base_point, half_side_length, 0)
+
+    sierpinski_triangle_aux(game_display, left_base_point, half_side_length, color, depth - 1)
+    sierpinski_triangle_aux(game_display, flipped_left_base_point, half_side_length, color, depth - 1)
+    sierpinski_triangle_aux(game_display, third_base_point, half_side_length, color, depth - 1)

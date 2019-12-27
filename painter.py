@@ -11,7 +11,7 @@ black = (0, 0, 0)
 
 game_display.fill(white)
 
-sierpinski_triangle(game_display, (100, 500), 500, black, white, 1)
+sierpinski_triangle(game_display, (100, 500), 500, black, white, 4)
 
 crashed = False
 
