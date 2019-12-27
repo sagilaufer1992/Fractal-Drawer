@@ -1,5 +1,5 @@
 import pygame
-from utils.polygon_drawings import equilateral_triangle
+from fractals.sierpinski_triangle import sierpinski_triangle
 
 pygame.init()
 
@@ -11,7 +11,7 @@ black = (0, 0, 0)
 
 game_display.fill(white)
 
-equilateral_triangle(game_display, black, (100, 500), 200, True)
+sierpinski_triangle(game_display, (100, 500), 500, black, white, 1)
 
 crashed = False
 
