@@ -1,16 +1,17 @@
 import pygame
+from utils.polygon_drawings import equilateral_triangle
 
 pygame.init()
 
-gameDisplay = pygame.display.set_mode((800,600))
+game_display = pygame.display.set_mode((800, 600))
 pygame.display.set_caption('Fractal Painter')
 
-white = (255,255,255)
-black = (0,0,0)
+white = (255, 255, 255)
+black = (0, 0, 0)
 
-gameDisplay.fill(white)
+game_display.fill(white)
 
-pygame.draw.line(gameDisplay, black, (100,200), (100,600),1)
+equilateral_triangle(game_display, black, (100, 500), 200, True)
 
 crashed = False
 
@@ -21,6 +22,3 @@ while not crashed:
             crashed = True
 
     pygame.display.update()
-
-
-
