@@ -1,5 +1,6 @@
 import pygame
 from fractals.sierpinski_triangle import sierpinski_triangle
+from fractals.koch_snowflake import koch_triangle
 
 pygame.init()
 
@@ -11,7 +12,8 @@ black = (0, 0, 0)
 
 game_display.fill(white)
 
-sierpinski_triangle(game_display, (100, 500), 500, black, white, 4)
+# sierpinski_triangle(game_display, (100, 500), 500, black, white, 4)
+koch_triangle(game_display, black, (100, 400), 360, 4)
 
 crashed = False
 

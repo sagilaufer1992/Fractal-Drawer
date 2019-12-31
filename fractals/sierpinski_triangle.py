@@ -1,4 +1,4 @@
-from utils.polygon_drawings import equilateral_triangle
+from utils.geometric_drawings import equilateral_triangle
 from utils.point_calculations import generate_point_by_distance_and_angle
 
 
@@ -14,7 +14,7 @@ def sierpinski_triangle_aux(game_display, left_base_point, side_length, color, d
 
     half_side_length = side_length / 2
 
-    flipped_left_base_point = generate_point_by_distance_and_angle(left_base_point, half_side_length, -120)
+    flipped_left_base_point = generate_point_by_distance_and_angle(left_base_point, half_side_length, -60)
     equilateral_triangle(game_display, color, flipped_left_base_point, half_side_length, True, True)
 
     third_base_point = generate_point_by_distance_and_angle(left_base_point, half_side_length, 0)
